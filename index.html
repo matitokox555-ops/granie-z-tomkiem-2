@@ -70,6 +70,58 @@
       font-size: 0.9rem;
       color: #ccc;
     }
+
+    /* GUI overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: 5;
+    }
+    .overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .popup {
+      background: rgba(255,255,255,0.1);
+      padding: 50px 60px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+      animation: popupIn 0.4s ease;
+      text-align: center;
+    }
+    @keyframes popupIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .popup h2 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ffcc66;
+    }
+    .popup button {
+      margin-top: 20px;
+      background: #ffcc66;
+      color: #222;
+      padding: 15px 30px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .popup button:hover {
+      background: #ffd580;
+    }
   </style>
 </head>
 <body>
@@ -98,10 +150,23 @@
     © 2025 Granie i Gadanie z Tomkiem — Wszystkie prawa zastrzeżone
   </footer>
 
+  <!-- GUI overlay -->
+  <div class="overlay" id="popupOverlay">
+    <div class="popup">
+      <h2>💸 Zapłata na Discord — nick: tomektokox</h2>
+      <button onclick="zamknijPopup()">OK</button>
+    </div>
+  </div>
+
   <script>
     function zaplata() {
-      alert("💸 Zapłata na Discord — nick: tomektokox");
+      document.getElementById("popupOverlay").classList.add("active");
+    }
+
+    function zamknijPopup() {
+      document.getElementById("popupOverlay").classList.remove("active");
     }
   </script>
 </body>
 </html>
+
