@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Granie i Gadanie z Tomkiem</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141428, #282845);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    .pakiety {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 40px 20px 80px;
+    }
+    .pakiet {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      width: 280px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .pakiet:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.15);
+    }
+    .pakiet h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+    .cena {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 10px 0;
+      color: #ffcc66;
+    }
+    button {
+      background: #ffcc66;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #222;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #ffd580;
+      transform: scale(1.05);
+    }
+    footer {
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 Granie i Gadanie z Tomkiem 🎙️</h1>
+    <p>Dołącz i spędź czas w luźnym klimacie!</p>
+  </header>
+
+  <section class="pakiety">
+    <div class="pakiet">
+      <h2>🎟️ Pakiet Standard</h2>
+      <div class="cena">20 zł / miesiąc</div>
+      <p>Granie z Tomkiem z oczekiwaniem na swoją kolej.</p>
+      <button onclick="zaplata()">Zapłać</button>
+    </div>
+
+    <div class="pakiet">
+      <h2>⚡ Pakiet Premium</h2>
+      <div class="cena">50 zł / miesiąc</div>
+      <p>Granie bez czekania – priorytetowa kolejka!</p>
+      <button onclick="zaplata()">Zapłać</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Granie i Gadanie z Tomkiem — Wszystkie prawa zastrzeżone
+  </footer>
+
+  <script>
+    function zaplata() {
+      alert("💸 Zapłata na Discord — nick: tomektokox");
+    }
+  </script>
+</body>
+</html>
