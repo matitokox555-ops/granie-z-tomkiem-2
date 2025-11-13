@@ -11,6 +11,7 @@
       background: linear-gradient(135deg, #141428, #282845);
       color: white;
       text-align: center;
+      overflow-x: hidden;
     }
 
     /* Pasek promocji u góry */
@@ -42,7 +43,7 @@
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
-      padding: 40px 20px 40px;
+      padding: 40px 20px;
     }
 
     .pakiet {
@@ -52,8 +53,6 @@
       width: 280px;
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
       transition: transform 0.2s, background 0.2s;
-      position: relative;
-      overflow: hidden;
     }
 
     .pakiet:hover {
@@ -103,6 +102,54 @@
       padding: 20px;
       font-size: 0.9rem;
       color: #ccc;
+    }
+
+    /* Sekcja top wspierających */
+    .top-support {
+      margin-top: 60px;
+      padding: 40px 20px 60px;
+      background: rgba(255,255,255,0.05);
+      border-top: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .top-support h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ffcc66;
+      text-shadow: 0 0 15px rgba(255,204,102,0.4);
+    }
+
+    .supporters {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .supporter {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 25px 35px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      min-width: 220px;
+      transition: transform 0.3s;
+    }
+
+    .supporter:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .supporter h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .supporter p {
+      margin: 10px 0 0;
+      color: #a3ffcc;
+      font-weight: 600;
     }
 
     /* GUI overlay */
@@ -205,6 +252,20 @@
     📦 Możesz też kupić z góry kilka pakietów, np. <b>12 miesięcy</b> — wtedy nie musisz się martwić o przedłużenie!
   </p>
 
+  <section class="top-support">
+    <h2>🏆 Top wspierający</h2>
+    <div class="supporters">
+      <div class="supporter">
+        <h3>🔥 Mloe_official 🦝</h3>
+        <p>200 Hot Dogów</p>
+      </div>
+      <div class="supporter">
+        <h3>🔥 Natanyt 🌯</h3>
+        <p>Śmigła</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     © 2025 Granie i Gadanie z Tomkiem — Wszystkie prawa zastrzeżone
   </footer>
@@ -229,5 +290,6 @@
       document.getElementById("popupOverlay").classList.remove("active");
     }
   </script>
+
 </body>
 </html>
